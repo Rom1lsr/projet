@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+  <h1>Bienvenue sur mon application</h1>
+  <ul>
+    <li><a href="{{ path('app_services') }}">Voir les services</a></li>
+    <li><a href="{{ path('app_reservation') }}">Nouvelle réservation</a></li>
+    
+  </ul>
+{% endblock %}

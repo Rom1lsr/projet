@@ -1,0 +1,27 @@
+<!-- templates/service/index.html.twig -->
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Liste des services</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Clé</th>
+                <th>Nom</th>
+                <th>Public</th>
+                <th>Propriétaire</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for service in services %}
+                <tr>
+                    <td>{{ service.key }}</td>
+                    <td>{{ service.name }}</td>
+                    <td>{{ service.isPublic ? 'Oui' : 'Non' }}</td>
+                    <td>{{ service.user.username }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

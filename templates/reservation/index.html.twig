@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réserver un service{% endblock %}
+
+{% block body %}
+    <h1>Réserver un service</h1>
+
+    <form method="post">
+        {{ form_start(form) }}
+        {{ form_row(form.service) }}
+        {{ form_row(form.date_start) }}
+        {{ form_row(form.date_end) }}
+        <button type="submit">Réserver</button>
+        {{ form_end(form) }}
+    </form>
+{% endblock %}
