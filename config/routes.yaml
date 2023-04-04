@@ -1,0 +1,57 @@
+# Page d'accueil
+app_home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+# Page de connexion
+app_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+
+# Déconnexion
+app_logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
+
+# Page de réservation
+app_reservation:
+    path: /reservation
+    controller: App\Controller\ReservationController::create
+    methods: [GET, POST]
+
+# Page de succès de réservation
+app_reservation_success:
+    path: /reservation/success
+    controller: App\Controller\ReservationController::success
+
+# API pour récupérer les services
+app_api_services:
+    path: /api/services
+    controller: App\Controller\ApiController::getServices
+    methods: [GET]
+
+# Page des services
+app_services:
+    path: /services
+    controller: App\Controller\ServiceController::index
+    methods: [GET]
+
+# Page de création de service
+app_service_create:
+    path: /services/create
+    controller: App\Controller\ServiceController::create
+    methods: [GET, POST]
+
+# Page d'édition de service
+app_service_edit:
+    path: /services/{id}/edit
+    controller: App\Controller\ServiceController::edit
+    methods: [GET, POST]
+
+# Page de suppression de service
+app_service_delete:
+    path: /services/{id}/delete
+    controller: App\Controller\ServiceController::delete
+    methods: [POST]
+
+
